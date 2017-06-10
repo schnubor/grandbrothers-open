@@ -4,22 +4,50 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "spinner.scss";
+
 html, body { height: 100%; }
 
 .main-border {
     left: calc( 50% - 2em );
     top: calc( 50% - 2em );
     position: fixed;
+    z-index: 999;
     box-sizing: content-box;
     width: 0px;
     height: 0px;
     border: 4em solid red;
     transition: 1s all ease;
 
+    &.clickable { cursor: pointer; }
+
     &.active {
         left: 0;
         top: 0;
         width: calc(100% - 8em);
         height: calc(100% - 8em);
+    }
+}
+
+.content-wrapper {
+    padding: 4em;
+    display: none;
+
+    .content {
+        font-size: 14px;
+        padding: 2em;
+    }
+
+    .left, .right {
+        width: 50%;
+        display: inline-block;
+        font-size: 0;
+    }
+
+    .right {
+        -moz-transform: scaleX(-1);    /* Gecko */
+        -o-transform: scaleX(-1);      /* Opera */
+        -webkit-transform: scaleX(-1); /* Webkit */
+        transform: scaleX(-1);         /* Standard */
     }
 }
