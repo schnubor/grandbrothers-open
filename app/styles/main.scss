@@ -1,0 +1,25 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+html, body { height: 100%; }
+
+.main-border {
+    left: calc( 50% - 2em );
+    top: calc( 50% - 2em );
+    position: fixed;
+    box-sizing: content-box;
+    width: 0px;
+    height: 0px;
+    border: 4em solid red;
+    transition: 1s all ease;
+
+    &.active {
+        left: 0;
+        top: 0;
+        width: calc(100% - 8em);
+        height: calc(100% - 8em);
+    }
+}
