@@ -23,9 +23,7 @@ $( document ).ready( function(){
 } );
 
 $(window).on('load', function() {
-    setTimeout( function() {
-        $('.main-border .spinner').fadeOut();
-        $('.main-border').addClass('clickable');
-    }, 1000 );
+    $('.main-border .spinner').fadeOut();
+    $('.main-border').addClass('clickable');
 } );
 
