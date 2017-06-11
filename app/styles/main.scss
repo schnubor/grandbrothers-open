@@ -23,7 +23,10 @@ html, body {
     transition: 1s all ease;
     pointer-events: none;
 
-    &.clickable { cursor: pointer; }
+    &.clickable { 
+        cursor: pointer; 
+        pointer-events: auto;
+    }
 
     &.active {
         left: 0;
@@ -43,6 +46,9 @@ html, body {
         font-size: 14px;
         width: 300%;
         height: 100%;
+        color: white;
+        font-size: 20px;
+        line-height: 1.8;
 
         .section {
             display: inline-block;
@@ -56,7 +62,9 @@ html, body {
         height: 100%;
         display: inline-block;
         font-size: 0;
-        overflow-x: auto;
+        overflow: hidden;
+        background-image: url('/images/bg.jpg');
+        background-size: cover;
     }
 
     .right {
